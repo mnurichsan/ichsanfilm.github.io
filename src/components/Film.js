@@ -12,7 +12,7 @@ class Film extends React.Component {
 
     componentDidMount = async () => {
         const title = this.props.location.state.film;
-        const req = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${title}"`);
+        const req = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${title}"`);
         const res = await req.json();
         this.setState({ filmPilih: res.Search[0] })
         console.log(this.state.filmPilih);

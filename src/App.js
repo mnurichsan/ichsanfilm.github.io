@@ -16,7 +16,7 @@ class App extends Component {
   getFilm = async (e) => {
     const filmName = e.target.elements.filmName.value;
     e.preventDefault();
-    const api_call = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${filmName}"`);
+    const api_call = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${filmName}"`);
 
     const data = await api_call.json();
     this.setState({ films: data.Search });
